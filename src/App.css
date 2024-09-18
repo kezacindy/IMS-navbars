@@ -36,3 +36,99 @@
     transform: rotate(360deg);
   }
 }
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #073D65;
+  
+  padding: 6px 20px ;
+  color: white;
+  border-radius: 8px;
+  width: 100%; /* Ensure the navbar takes the full width */
+  box-sizing: border-box;  
+}
+.top-navbar h1 {
+  font-size: 14px; /* Adjust this size as needed */
+  margin-left: 10px; /* Optional: Adjust space between logo and text */
+  color: white; /* Optional: Ensure the color fits your design */
+}
+
+.top-navbar .logo-container {
+  
+  display: flex; /* Flexbox for logo and text */
+  align-items: center; /* Center items vertically */
+}
+.top-navbar .logo {
+  max-width: 70px; /* Maximum width for the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+
+.top-navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.top-navbar .nav-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.top-navbar .nav-item.selected::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(104, 104, 202);
+  bottom: -5px;
+  left: 0;
+}
+
+.login-btn {
+  background-color: #1277B5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.login-btn:hover {
+  background-color: rgb(5, 16, 56);
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 240, 240);
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%; /* Ensure the navbar takes the full width */
+  box-sizing: border-box;  
+}
+
+.bottom-navbar .bottom-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-navbar .bottom-nav-item {
+  cursor: pointer;
+  color: black;
+  padding: 5px 10px;
+}
+
+.bottom-navbar .bottom-nav-item.bottom-selected {
+  background-color: #1277B5;
+  color: white;
+  border-radius: 5px;
+}

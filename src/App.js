@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'; // Ensure you have styling from the CSS file
+import TopNavbar from './TopNavbar';
+import BottomNavbar from './BottomNavbar';
+
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState('Crimes');
+  const [selectedBottomPage, setSelectedBottomPage] = useState('Dashboard');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopNavbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      {/* Add your content components here */}
+      <BottomNavbar selectedBottomPage={selectedBottomPage} setSelectedBottomPage={setSelectedBottomPage} />
     </div>
   );
 }
